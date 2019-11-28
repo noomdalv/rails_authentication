@@ -25,7 +25,6 @@ class ApplicationController < ActionController::Base
     BCrypt::Password.new(User.remember_digest).is_password?(remember_token)
   end
 
-
   def remember(user)
     cookies.permanent.signed[:user_id] = user.id
     cookies.permanent[:remember_token] = user.remember_digest

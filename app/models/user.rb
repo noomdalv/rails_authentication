@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-  attr_accessor :remember_digest 
+  attr_accessor :remember_digest
+  
   before_create :create_remember_token
   before_save { email.downcase! }
 
@@ -28,8 +29,7 @@ class User < ApplicationRecord
 
   private
 
-
   def create_remember_token
-  self.remember_digest = User.digest_method(User.new_token)
+    self.remember_digest = User.digest_method(User.new_token)
   end
 end
