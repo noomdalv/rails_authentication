@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= full_title(yield(:title)) %></title>
+    <title>MembersOnly</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,8 +9,6 @@
   </head>
 
   <body>
-    <%= render 'layouts/header' %>
-    <%= render 'shared/flash_messages' %>
     <%= yield %>
   </body>
 </html>
