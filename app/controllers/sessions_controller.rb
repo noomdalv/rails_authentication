@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
 
   def new
+    sign_out
   end
 
   def create
@@ -9,6 +10,8 @@ class SessionsController < ApplicationController
       sign_in @user #creates a session[:user_id]
       remember(@user)
       set_current_user @user
+      flash[:success] = 'Welcome!'
+      redirect_to root_url
     else
       flash.now[:danger] = 'Invalid email/password combination'
       render 'new'
@@ -17,6 +20,7 @@ class SessionsController < ApplicationController
 
   def destroy
     sign_out if signed_in?
+    flash[:success] = 'Logout succesful!'
     redirect_to root_url
   end
 end
