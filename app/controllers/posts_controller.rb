@@ -10,9 +10,8 @@ class PostsController < ApplicationController
     if @post.save
       flash[:success] = 'Post created succesfully!'
       redirect_to root_url
-
     else
-      flash[:danger] = 'Invalid inputs'
+      flash.now[:danger] = 'Invalid inputs'
       render 'new'
     end
   end
