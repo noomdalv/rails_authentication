@@ -1,15 +1,15 @@
-class SessionsController < ApplicationController
+# frozen_string_literal: true
 
+class SessionsController < ApplicationController
   def new
     sign_out
   end
 
   def create
     @user = User.find_by(email: params[:session][:email].downcase)
-    if @user && @user.authenticate(params[:session][:password])
-      sign_in @user #creates a session[:user_id]
+    if @user&.authenticate(params[:session][:password])
+      sign_in @user # creates a session[:user_id]
       remember(@user)
-      set_current_user @user
       flash[:success] = 'Welcome!'
       redirect_to root_url
     else

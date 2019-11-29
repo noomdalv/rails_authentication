@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   attr_accessor :remember_digest
   has_many :posts
@@ -5,7 +7,7 @@ class User < ApplicationRecord
   before_save { email.downcase! }
   validates :name, presence: true, length: { maximum: 50 }
 
-  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i.freeze
   validates :email, presence: true, length: { maximum: 255 },
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
@@ -13,18 +15,16 @@ class User < ApplicationRecord
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }
 
-
   class << self
-      # Returns a random token.
+    # Returns a random token.
     def new_token
-    SecureRandom.urlsafe_base64
+      SecureRandom.urlsafe_base64
     end
 
     def digest_method(token)
       Digest::SHA1.hexdigest(token.to_s)
     end
   end
-
 
   private
 

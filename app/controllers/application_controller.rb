@@ -1,20 +1,21 @@
+# frozen_string_literal: true
+
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  include SessionsHelper
 
   def sign_in(user)
     session[:user_id] = user.id
   end
 
-  def set_current_user(user)
-    @current_user = user
-  end
+  attr_writer :current_user
 
   def current_user
     if (user_id = session[:user_id])
       @current_user ||= User.find_by(id: user_id)
     elsif (user_id = cookies.signed[:user_id])
       user = User.find_by(id: user_id)
-      if user && user.authenticated?(cookies[:remember_token])
+      if user&.authenticated?(cookies[:remember_token])
         sign_in user
         @current_user = user
       end
@@ -28,10 +29,6 @@ class ApplicationController < ActionController::Base
   def remember(user)
     cookies.permanent.signed[:user_id] = user.id
     cookies.permanent[:remember_token] = user.remember_digest
-  end
-
-  def signed_in?
-   !current_user.nil?
   end
 
   # Signs out the current user.
