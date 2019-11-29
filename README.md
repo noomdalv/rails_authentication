@@ -14,7 +14,7 @@ How to install
 
 1. Open Terminal
 2. git clone https://github.com/noomdalv/rails_authentication.git
-3. cd rails_form
+3. cd rails_authentication
 4. Open it in you text editor and you can go through the files
 
 
