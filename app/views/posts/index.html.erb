@@ -1,0 +1,23 @@
+<h1>Available Posts</h1>
+<div class="posts container">
+  <div class="col-md-12">
+    <% @posts.each do |post| %>
+      <div class="form-control form-wrap">
+        <div class="form-group">
+
+          <label for="title">Title:</label>
+          <input type="text" class="form-control" id="title" value="<%= post.title %>" disabled>
+
+          <% if signed_in? %>
+            <% user = User.find(post.user_id) %>
+            <label for="author">Author:</label>
+            <input type="text" class="form-control" id="author" value="<%= user.name %>" disabled>
+          <% end %>
+
+          <label for="body">Body:</label>
+          <textarea class="form-control" rows="5" id="body"><%= post.body %></textarea><br>
+        </div>
+      </div>
+  	<% end %>
+  </div>
+</div>
