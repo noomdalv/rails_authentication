@@ -13,17 +13,17 @@ This is the sixth project (collaborative) of the Main Ruby on Rails curriculum a
 How to install
 
 1. Open Terminal
-2. git clone https://github.com/sumancrest0001/rails-form.git
+2. git clone https://github.com/noomdalv/rails_authentication.git
 3. cd rails_form
 4. Open it in you text editor and you can go through the files
 
 
-Contributors
+#### Contributors
 ### sumancrest0001 (https://github.com/sumancrest0001)
 
 ### noomdalv (https://github.com/noomdalv)
 
 
-License
+#### License
 
 MIT Licensed
