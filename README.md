@@ -1,24 +1,29 @@
-# README
+### Project: Members-Only
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Microverse
 
-Things you may want to cover:
+This is the sixth project (collaborative) of the Main Ruby on Rails curriculum at Microverse - @microverseinc
 
-* Ruby version
+    The goal was to create a rails project with user authentication(cookie signed) implementation.
 
-* System dependencies
+    The project was completed using Rails 5.1.6 with Bootstrap and BCrypt for encryption.
 
-* Configuration
+## Language Used: Ruby, HTML & CSS
 
-* Database creation
+How to install
 
-* Database initialization
+1. Open Terminal
+2. git clone https://github.com/sumancrest0001/rails-form.git
+3. cd rails_form
+4. Open it in you text editor and you can go through the files
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+Contributors
+### sumancrest0001 (https://github.com/sumancrest0001)
 
-* Deployment instructions
+### noomdalv (https://github.com/noomdalv)
 
-* ...
+
+License
+
+MIT Licensed
