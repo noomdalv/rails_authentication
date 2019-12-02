@@ -4,7 +4,7 @@
 
 This is the sixth project (collaborative) of the Main Ruby on Rails curriculum at Microverse - @microverseinc
 
-    The goal was to create a rails project with user authentication(cookie signed) implementation.
+    The goal was to create a rails project with user authentication(cookie signed) implementation. Anther objective was to create posts and providing all the information to logged user only.
 
     The project was completed using Rails 5.1.6 with Bootstrap and BCrypt for encryption.
 
