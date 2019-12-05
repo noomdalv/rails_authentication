@@ -9,9 +9,8 @@
           <input type="text" class="form-control" id="title" value="<%= post.title %>" disabled>
 
           <% if signed_in? %>
-            <% user = User.find(post.user_id) %>
             <label for="author">Author:</label>
-            <input type="text" class="form-control" id="author" value="<%= user.name %>" disabled>
+            <input type="text" class="form-control" id="author" value="<%= post.user.name %>" disabled>
           <% end %>
 
           <label for="body">Body:</label>
