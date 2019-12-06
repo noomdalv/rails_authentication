@@ -6,8 +6,7 @@ class SessionsController < ApplicationController
   def create
     @user = User.find_by(email: params[:session][:email].downcase)
     if @user&.authenticate(params[:session][:password])
-      sign_in @user # creates a session[:user_id]
-      remember(@user)
+      remember @user
       flash[:success] = 'Welcome!'
       redirect_to root_url
     else

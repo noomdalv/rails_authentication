@@ -3,18 +3,21 @@
 class PostsController < ApplicationController
   before_action :signed_in?, only: %i[new create]
 
-  def new
-    @post = current_user.posts.new
-  end
+  def new; end
 
   def create
-    @post = current_user.posts.new(post_params)
-    if @post.save
-      flash[:success] = 'Post created succesfully!'
+    if current_user.nil?
+      flash[:danger] = 'You need to be signed in to create post'
       redirect_to root_url
     else
-      flash[:danger] = 'Invalid inputs'
-      render 'new'
+      @post = current_user.posts.new(post_params)
+      if @post.save
+        flash[:success] = 'Post created succesfully!'
+        redirect_to root_url
+      else
+        flash[:danger] = 'Invalid inputs'
+        render 'new'
+      end
     end
   end
 
