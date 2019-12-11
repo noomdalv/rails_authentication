@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+<<<<<<< HEAD
     <title>MembersOnly</title>
+=======
+    <title><%= full_title(yield(:title)) %></title>
+>>>>>>> 3b60921297d8ea6da4c14cf13dab4cdea8beef85
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +13,11 @@
   </head>
 
   <body>
+<<<<<<< HEAD
+=======
+    <%= render 'layouts/header' %>
+    <%= render 'shared/flash_messages' %>
+>>>>>>> 3b60921297d8ea6da4c14cf13dab4cdea8beef85
     <%= yield %>
   </body>
 </html>
