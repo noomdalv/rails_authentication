@@ -1,6 +1,6 @@
-### Project: Members-Only
+## Project: Members-Only
 
-# Microverse
+<b>Microverse</b>
 
 This is the sixth project (collaborative) of the Main Ruby on Rails curriculum at Microverse - @microverseinc
 
@@ -9,22 +9,27 @@ Another objective was to create posts and to provide user information to logged 
 
 The project was completed using Rails 5.1.6 with Bootstrap and BCrypt for encryption.
 
-## Languages Used: Ruby, HTML & CSS
+## App Screenshot
+![screenshot](https://i.imgur.com/Klwc1aO.png?1)
 
-How to install
+## Languages Used: 
+- Ruby
+- HTML / CSS
 
-1. Open Terminal
+## How to install
+
+1. open terminal window then execute:
 2. git clone https://github.com/noomdalv/rails_authentication.git
 3. cd rails_authentication
-4. Open it in any text editor and you can go through the files
+4. bundle install
+5. rails db:migrate
+6. rails server
 
 
-#### Contributors
-### sumancrest0001 (https://github.com/sumancrest0001)
+## 👤 Authors
+- Github: [@sumancrest0001](https://github.com/sumancrest0001)
 
-### noomdalv (https://github.com/noomdalv)
+- Github: [@noomdalv]((https://github.com/noomdalv))
 
-
-#### License
-
-MIT Licensed
+## 📝 License
+This project is [MIT](lic.url) licensed.
