@@ -27,9 +27,12 @@ The project was completed using Rails 5.1.6 with Bootstrap and BCrypt for encryp
 
 
 ## 👤 Authors
-- Github: [@sumancrest0001](https://github.com/sumancrest0001)
 
-- Github: [@noomdalv](https://github.com/noomdalv)
+- Github: [@sumancrest0001](https://github.com/sumancrest0001)<br />
+  Email: suman.crest0001@gmail.com
+
+- Github: [@noomdalv](https://github.com/noomdalv)<br />
+  Email: vladlunasan@gmail.com
 
 ## 📝 License
 
